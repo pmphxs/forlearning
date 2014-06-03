@@ -1,5 +1,5 @@
 <?php
-  
+  //从mysql读取数据并生成xspf  
    header("Content-Type:text/xml;charset:utf-8");
 
    $xspf = new DOMdocument("1.0","utf-8");

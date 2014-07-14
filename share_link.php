@@ -2,7 +2,18 @@
 
 	function sql($host,$user,$pass,$db){
 		$handle = mysql_connect($host,$ursr,$pass) or die('连接数据库失败'.mysql_error());
-		mysql_select_db($db,$handle) or mysql_create_db($db,$handle) && mysql_select_db($db,$handle);
-		
+		if(!mysql_select_db($db,$handle)){
+			mysql_create_db($db,$handle);
+			mysql_select_db($db,$handle);
+			$sql = 'create table share_link(int id int not null primary key autoincrement,link varchar(255) not null default "",pass varchar(25) not null default ""';
+			mysql_query($sql,$handle);
+		}
+
+		$sql = 'select * from share_link';
+		$res = mysql_query($sql);
+		while($arr = mysql_fetch_assoc($res)){
+			echo " link ".$arr['link'].' pass '.$arr['pass'].'<br>';
+		}
+		mysql_close($$handle);
 	}
 	

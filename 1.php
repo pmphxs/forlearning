@@ -1,4 +1,8 @@
 <?php
+
+	//时间函数的测试
+	echo date('Ymd');
+
 	//echo 0=='0';
 
 	//测试一array_push的功能，居然直接把var当成一个整体压进去了，成为二维的了。。。。。不理想,用foreach +直接赋值还可以
@@ -16,41 +20,41 @@
 	//抽象类能继承普通类，普通类能继承抽象类
 	//抽象类中可以有静态成员、静态方法
 	//
-	class a{
+	// class a{
 
-	}
+	// }
 
-	$dd = new a;
+	// $dd = new a;
 	
-	abstract class c extends a{
-		protected static $static;
-		public static function static_fucntion(){
+	// abstract class c extends a{
+	// 	protected static $static;
+	// 	public static function static_fucntion(){
 
-			echo ' static function '."\n";
-		}
-		abstract function dd($dd);
-	}
+	// 		echo ' static function '."\n";
+	// 	}
+	// 	abstract function dd($dd);
+	// }
 
-	class b extends c{
+	// class b extends c{
 
-		private $b;
-		function __construct(&$a){
-			$this->b = $a;
-			echo ' ok ';
-		}
-		function __destruct(){
-			echo ' die ';
-		}
-		function dd($res){
-			echo $res;
-			c::static_fucntion();
-			c::$static = 1;
-			echo c::$static;
-		}
-	}
+	// 	private $b;
+	// 	function __construct(&$a){
+	// 		$this->b = $a;
+	// 		echo ' ok ';
+	// 	}
+	// 	function __destruct(){
+	// 		echo ' die ';
+	// 	}
+	// 	function dd($res){
+	// 		echo $res;
+	// 		c::static_fucntion();
+	// 		c::$static = 1;
+	// 		echo c::$static;
+	// 	}
+	// }
 
-	$a = new b($dd);
-	$a->dd('Hello World!');
-	c::static_fucntion();
+	// $a = new b($dd);
+	// $a->dd('Hello World!');
+	// c::static_fucntion();
 
 

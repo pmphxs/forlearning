@@ -6,7 +6,7 @@
 	//error_reporting(E_ALL & ~E_NOTICE);
 
 
-	function def_request($url,$method='get',$post_data='',$header=array(),$setop=array()){
+	function def_request($url,$header=array(),$setop=array()){
 		//post 所有的配置需要$setop传过来
 		//1
 		$handle = curl_init($url);
@@ -41,8 +41,7 @@
 		// if(empty($header)){
 		// 	curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
 		// }
-
-		var_dump($options);
+		//var_dump($options);
 		curl_setopt_array($handle,$options);
 		
 		//3

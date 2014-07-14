@@ -15,6 +15,7 @@
 
 	//抽象类能继承普通类，普通类能继承抽象类
 	//抽象类中可以有静态成员、静态方法
+	//
 	class a{
 
 	}
@@ -23,7 +24,7 @@
 	
 	abstract class c extends a{
 		protected static $static;
-		protected static function static_fucntion(){
+		public static function static_fucntion(){
 
 			echo ' static function '."\n";
 		}
@@ -48,6 +49,8 @@
 		}
 	}
 
-	(new b($dd))->dd('Hello World!');
+	$a = new b($dd);
+	$a->dd('Hello World!');
+	c::static_fucntion();
 
 

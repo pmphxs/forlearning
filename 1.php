@@ -1,8 +1,18 @@
 <?php
 
-	//时间函数的测试
-	echo date('Ymd');
+	//动态加载类
+	$obj = 'aaaa';
+	class aaaa{
+		function __construct(){
+			echo 'sb';		
 
+		}
+	}
+
+	$dx = new $obj;
+	
+	//时间函数的测试
+	// echo date('Ymd');
 	//echo 0=='0';
 
 	//测试一array_push的功能，居然直接把var当成一个整体压进去了，成为二维的了。。。。。不理想,用foreach +直接赋值还可以

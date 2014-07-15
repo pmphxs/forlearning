@@ -8,7 +8,7 @@
 			mysql_select_db($db,$handle);
 			$sql = 'create table share_link(int id int not null primary key autoincrement,link varchar(255) not null default "",pass varchar(25) not null default ""';
 			mysql_query($sql,$handle);
-			echo 
+			///echo 
 		}
 
 		$sql = 'select * from share_link';

@@ -7,12 +7,12 @@
 	//$user = false;
 	//上面几种 只要是和‘’==$user <===>empty($user);
 	//$user = 'dfaf';
-	if(!isset($user)){
-		echo 'not isset';
-	}
-	if(empty($user)){
-		echo 'empty';
-	}
+	// if(!isset($user)){
+	// 	echo 'not isset';
+	// }
+	// if(empty($user)){
+	// 	echo 'empty';
+	// }
 
 	// 继承方法问题
 	//me理解为对this指针的理解，那个对象调用就是那个对象的指针
@@ -23,7 +23,7 @@
 	// 	}
 	// 	function __destruct(){
 	// 		echo 'die p'."\n";
-	// 	}
+	// 	
 	// 	//abstract protected function a1();
 	// 	function a1(){}
 	// 	public function pp(){
@@ -55,15 +55,15 @@
 	// echo($a);
 
 	//动态加载类
-	// $obj = 'aaaa';
-	// class aaaa{
-	// 	function __construct(){
-	// 		echo 'sb';		
+	$obj = 'aaaa';
+	class aaaa{
+		function __construct($a){
+			echo 'sb';		
+			echo $a;
+		}
+	}
 
-	// 	}
-	// }
-
-	// $dx = new $obj;
+	$dx = new $obj(12);
 	
 	//时间函数的测试
 	// echo date('Ymd');

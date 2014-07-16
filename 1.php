@@ -1,15 +1,53 @@
 <?php
+	// 继承方法问题
+	//me理解为对this指针的理解，那个对象调用就是那个对象的指针
+	abstract class p{
 
-	//动态加载类
-	$obj = 'aaaa';
-	class aaaa{
+		public function __construct(){
+			echo 'gen p'."\n";
+		}
+		function __destruct(){
+			echo 'die p'."\n";
+		}
+		//abstract protected function a1();
+		function a1(){}
+		public function pp(){
+			$this->a1();
+		}
+	}
+	
+	class cc extends p{
 		function __construct(){
-			echo 'sb';		
+			echo  'gen cc'."\n";
 
+		}
+
+		function __destruct(){
+			echo 'die cc'."\n";
+		}
+		function a1(){
+			echo 'child'."\n";
 		}
 	}
 
-	$dx = new $obj;
+	$a = new cc;
+	$a->pp();
+	//大小写转换
+	// $a = 'dafafdfdfafad0';
+	// //$a[0]='A';
+	// $a[0] = strtoupper($a[0]);
+	// echo($a);
+
+	//动态加载类
+	// $obj = 'aaaa';
+	// class aaaa{
+	// 	function __construct(){
+	// 		echo 'sb';		
+
+	// 	}
+	// }
+
+	// $dx = new $obj;
 	
 	//时间函数的测试
 	// echo date('Ymd');

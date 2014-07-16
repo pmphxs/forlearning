@@ -1,37 +1,53 @@
 <?php
+	//var_dump($a->id);
+	//$user = null;
+	//isset()只判断此变量是否先前已经声明过
+	//$user = 0;
+	//$user = '';
+	//$user = false;
+	//上面几种 只要是和‘’==$user <===>empty($user);
+	//$user = 'dfaf';
+	if(!isset($user)){
+		echo 'not isset';
+	}
+	if(empty($user)){
+		echo 'empty';
+	}
+
 	// 继承方法问题
 	//me理解为对this指针的理解，那个对象调用就是那个对象的指针
-	abstract class p{
+	// abstract class p{
 
-		public function __construct(){
-			echo 'gen p'."\n";
-		}
-		function __destruct(){
-			echo 'die p'."\n";
-		}
-		//abstract protected function a1();
-		function a1(){}
-		public function pp(){
-			$this->a1();
-		}
-	}
+	// 	public function __construct(){
+	// 		echo 'gen p'."\n";
+	// 	}
+	// 	function __destruct(){
+	// 		echo 'die p'."\n";
+	// 	}
+	// 	//abstract protected function a1();
+	// 	function a1(){}
+	// 	public function pp(){
+	// 		$this->a1();
+	// 	}
+	// }
 	
-	class cc extends p{
-		function __construct(){
-			echo  'gen cc'."\n";
+	// class cc extends p{
+	// 	function __construct(){
+	// 		echo  'gen cc'."\n";
 
-		}
+	// 	}
 
-		function __destruct(){
-			echo 'die cc'."\n";
-		}
-		function a1(){
-			echo 'child'."\n";
-		}
-	}
+	// 	function __destruct(){
+	// 		echo 'die cc'."\n";
+	// 	}
+	// 	function a1(){
+	// 		echo 'child'."\n";
+	// 	}
+	// }
 
-	$a = new cc;
-	$a->pp();
+	// $a = new cc;
+
+	// $a->pp();
 	//大小写转换
 	// $a = 'dafafdfdfafad0';
 	// //$a[0]='A';

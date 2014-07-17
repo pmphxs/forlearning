@@ -10,7 +10,6 @@
 		//post 所有的配置需要$setop传过来
 		//1
 		$handle = curl_init($url);
-
 		//2
 		//设置options
 		$options = array(

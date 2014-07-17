@@ -55,15 +55,15 @@
 	// echo($a);
 
 	//动态加载类
-	$obj = 'aaaa';
-	class aaaa{
-		function __construct($a){
-			echo 'sb';		
-			echo $a;
-		}
-	}
+	// $obj = 'aaaa';
+	// class aaaa{
+	// 	function __construct($a){
+	// 		echo 'sb';		
+	// 		echo $a;
+	// 	}
+	// }
 
-	$dx = new $obj(12);
+	// $dx = new $obj(12);
 	
 	//时间函数的测试
 	// echo date('Ymd');

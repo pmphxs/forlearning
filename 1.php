@@ -1,4 +1,19 @@
 <?php
+	//引用问题
+	//= 看来是和 C++ 差不多是一种浅拷贝只是拷贝了指针。还未验证
+	class a{
+		private $dd = 1;
+		function __construct(){
+				echo "1\n";
+		}
+		function xx(){
+
+		}
+	}
+	$a = new a;
+	$b = $a;
+	var_dump($b);
+
 	//var_dump($a->id);
 	//$user = null;
 	//isset()只判断此变量是否先前已经声明过

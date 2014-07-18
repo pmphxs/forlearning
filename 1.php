@@ -1,7 +1,6 @@
 <?php
-	//引用问题,
+	//引用问题,=问题
 	//= 看来是和 C++ 差不多是一种浅拷贝只是拷贝了指针。还未验证
-	//unset 参考 http://php.net/manual/zh/function.unset.php
 	class a{
 		private $dd = 1;
 		function __construct(){
@@ -15,22 +14,10 @@
 		}
 	}
 	$a = new a;
-	$b =& $a;
-	
-	
-
-	aa($a);
-
-	unset($a);
-	var_dump($b);
-
-	$a = 1;
-	$b=&$a;
-	unset($a);
-	var_dump($b);
-
-	function aa($a){
-	}
+	$b = $a;//是引用还是复制了新的一份，验证
+	$b->xx();
+	//若为引用则输出2,否则为1
+	$a->yy();
 
 	//var_dump($a->id);
 	//$user = null;

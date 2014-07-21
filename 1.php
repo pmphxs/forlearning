@@ -1,23 +1,38 @@
 <?php
-	//引用问题,=问题
-	//= 看来是和 C++ 差不多是一种浅拷贝只是拷贝了指针。还未验证
-	class a{
-		private $dd = 1;
-		function __construct(){
-				echo "1\n";
-		}
-		function xx(){
-			$this->dd ++;
-		}
-		function yy(){
-			echo $this->dd;
+
+	//抽象类 抽象方法的问题
+	//抽象方法的覆盖，参数个数必须一致，参数是否是默认还需一致
+	abstract class a{
+		abstract function d($a,$b='');
+	}
+	class b extends a{
+		function d($c,$b='fa'){
+
+			echo $c.$b;
 		}
 	}
-	$a = new a;
-	$b = $a;//是引用还是复制了新的一份，验证
-	$b->xx();
+	$obj = new b;
+	$obj->d(11);
+
+	//引用问题,=问题
+	//= 看来是和 C++ 差不多是一种浅拷贝只是拷贝了指针。还未验证
+	// class a{
+	// 	private $dd = 1;
+	// 	function __construct(){
+	// 			echo "1\n";
+	// 	}
+	// 	function xx(){
+	// 		$this->dd ++;
+	// 	}
+	// 	function yy(){
+	// 		echo $this->dd;
+	// 	}
+	// }
+	// $a = new a;
+	// $b = $a;//是引用还是复制了新的一份，验证
+	// $b->xx();
 	//若为引用则输出2,否则为1
-	$a->yy();
+	// $a->yy();
 
 	//var_dump($a->id);
 	//$user = null;

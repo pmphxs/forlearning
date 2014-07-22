@@ -1,18 +1,22 @@
 <?php
 
+	//md5 16位与32位
+	echo $res = md5('aaa');
+	echo "\n".substr($res, 8,16);
+	//base64_encode(md5('aaa',true));
 	//抽象类 抽象方法的问题
 	//抽象方法的覆盖，参数个数必须一致，参数是否是默认还需一致
-	abstract class a{
-		abstract function d($a,$b='');
-	}
-	class b extends a{
-		function d($c,$b='fa'){
+	// abstract class a{
+	// 	abstract function d($a,$b='');
+	// }
+	// class b extends a{
+	// 	function d($c,$b='fa'){
 
-			echo $c.$b;
-		}
-	}
-	$obj = new b;
-	$obj->d(11);
+	// 		echo $c.$b;
+	// 	}
+	// }
+	// $obj = new b;
+	// $obj->d(11);
 
 	//引用问题,=问题
 	//= 看来是和 C++ 差不多是一种浅拷贝只是拷贝了指针。还未验证

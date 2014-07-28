@@ -1,32 +1,15 @@
 <?php
+class a{
 
-function aaaa(&$a='dfafaf'){
-	echo $a;
-	$a ='ddddddd';
+	function __construct($id){
+		echo $id;
+	}
 }
-aaaa();
-echo "\n";
-$b  = 'aaaaaaaaaa';
-aaaa($b);
 
-aaaa();
-
-aaaa($b);
-
-// $a = array
-// (
-//     'sec_id' => 'MD5',
-//     'v' => '1.0',
-//   );
-// echo http_build_query($a);
-
-
-
-// function fadfa($d){
-
-// 	echo 1;
-// 	echo $d;
-
-// }
-// $a='fadfa';
-// $a(3333333333);
+class b extends a{
+	function sqy(){
+		echo 'good';
+	}
+}
+$class = 'b';
+new $class(1);

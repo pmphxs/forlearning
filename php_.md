@@ -31,8 +31,9 @@
 
 		set_error_handler(error_function,error_type);
 **error_function**这个函数必须有四个参数：
+
 参数|含义
--|
+---|--------
 errno|常量，**错误等级**，E_WARNING  === 4。
 errstr|**错误的信息**
 errfile|发生错误的**文件**

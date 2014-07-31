@@ -1,15 +1,6 @@
 <?php
-class a{
 
-	function __construct($id){
-		echo $id;
+	$class = 'clasaneme';
+	if($sdk = YiiBase::autoload($class)){
+			echo 'load class error';
 	}
-}
-
-class b extends a{
-	function sqy(){
-		echo 'good';
-	}
-}
-$class = 'b';
-new $class(1);

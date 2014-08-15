@@ -3,7 +3,7 @@
 
 源文档地址: https://developers.google.com/translate/v2/getting_started
 
-本文pdf: [点击下载](./Google Translate API 文档简译.pdf)
+本文pdf: [点击下载](./Google translate Api 总结.pdf)
 
 
 [TOC]

@@ -109,13 +109,15 @@
 
 |参数|含义|选项（M:必选，O:可选）|
 |---|---|---|
-|key|自己在google获得的APIkeyddddd|M|
+|key|自己在google获得的APIkey|M|
 |target|目标语言|M
-|q|源语言文本|M
+|q|源语言文本，要被翻译的文本|M
 |source|源语言|O
 |format|只有TEXT/HMLT两种格式可选|O
-|callback|javascript的毁掉函数|O
-|prettyprint|prettyprint=true,返回的结果是对人友好的,默认为true|O
+|field|google返回的内容，翻译后的文本、源文本的语言类型是都返回来还是返回其中的一个，不填写默认都返回来。|O|
+|cid|用户自定义的针对翻译的Id|O
+|callback|javascript的毁掉函数|
+|prettyprint|prettyprint=true,返回的结果是对人友好的,默认为true|
 
 返回结果：json格式
 

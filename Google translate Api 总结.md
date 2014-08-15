@@ -1,7 +1,10 @@
 
 #Google Translate API 文档简译
 
-文档地址: https://developers.google.com/translate/v2/getting_started
+源文档地址: https://developers.google.com/translate/v2/getting_started
+
+本文pdf: [点击下载](./Google Translate API 文档简译.pdf)
+
 
 [TOC]
 
@@ -43,11 +46,13 @@
 ###Translate API的使用
 有三种方法可以使用
 
+
 |操作|描述|REST HTTP mapping|样例|
-|--|--|--|
+|---|---|---|
 |翻译|将源语言翻译为目标语言|GET|
 |语言列表|列出翻译操作所支持的源语言和目标语言|GET|
 |语言探测|探测源语言属于那种语言|GET
+
 
 ##发起请求的样式
 有很多种方法调用API:
@@ -107,6 +112,7 @@
 	
     X-HTTP-Method-Override: GET
 
+
 |参数|含义|选项（M:必选，O:可选）|
 |---|---|---|
 |key|自己在google获得的APIkey|M|
@@ -118,6 +124,7 @@
 |cid|用户自定义的针对翻译的Id|O
 |callback|javascript的毁掉函数|
 |prettyprint|prettyprint=true,返回的结果是对人友好的,默认为true|
+
 
 返回结果：json格式
 

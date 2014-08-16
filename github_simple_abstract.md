@@ -43,7 +43,7 @@
 
 就可以查看刚才操作后的状态如下图示,其中 **new file** 表示新添加的文件
 
-	![](./img/github_simple_abstract5.png)
+![](./img/github_simple_abstract5.png)
 	
 然后执行：
 

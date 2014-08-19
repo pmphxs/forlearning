@@ -56,4 +56,4 @@
 		}
 	}
 
-	echo soul11201_HttpRequest::get_method('https://www.googleapis.com/language/translate/v2?q=how+are+you&target=zh&key={YOUR_API_KEY}');
+	echo soul11201_HttpRequest::get_method('https://www.googleapis.com/language/translate/v2?q=how+are+you&target=zh&key=api key');

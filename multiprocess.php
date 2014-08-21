@@ -15,6 +15,8 @@
 	}else if($pid){
 		//echo (++$a);
 		echo "pid:".posix_getpid()."\n";
+		echo pcntl_wait($status)."\n";
+		echo "pid:".posix_getpid()."\n";
 	}else{
 		//echo (++$a);
 		echo "p:".posix_getppid()." pid: ".posix_getpid()."\n";
@@ -27,7 +29,12 @@
 	if($pid1==-1){
 		echo '1 failed'."\n";
 	}else if($pid1){
-			echo "pid1:".posix_getpid()."\n";
+		echo "pid1:".posix_getpid()."\n";
+		while(1){
+			usleep(10000);
+		};
+		//echo pcntl_wait($status)."\n";
+		echo "pid1:".posix_getpid()."\n";
 	}else{
 		echo "p1:".posix_getppid()." pid1: ".posix_getpid()."\n";
 	}

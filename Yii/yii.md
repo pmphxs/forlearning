@@ -8,7 +8,8 @@
 Yii::redirect($url) //url 重定向 302   
 ```
 
-##视图views
+#视图views
+##函数
 1. render函数
 ```php
 $theTime=date("D M j G:i:s T Y");
@@ -21,18 +22,18 @@ $this->render('helloWorld',array('time'=>$theTime));
 
  >业务逻辑 数据 视图分离
 
-##Controller
-1. filters()
+#Controller
+##过滤 函数
+1. filters()  返回过滤器配置相关数组
 
 
-##全局可使用的
+#Model
 
-1. 调用 `moudule/PostModule.php`文件里面的里面的**post_comments()**函数
-```php 
-    Yii::app()->getmodule('modulename')->post_comments()
-```
+##数据库相关的类函数
 
-2.
+**CDbCriteria** 类，用于查询时的条件，可以用于condtions,order by,limit/offset
+
+**CActiveRecord** 用户数据库**CRUD**操作的类
 
 ##过滤器
 
@@ -110,3 +111,13 @@ CController::filters() //方法。此方法应返回一个过滤器配置数组�
 
 3. 根据资料自己写的程序做个辅导的验证
 http://note.youdao.com/share/?id=f4caae4a8ff6cae43e7182efab162da1&type=note
+
+
+##全局可使用的
+
+1. 调用 `moudule/PostModule.php`文件里面的里面的**post_comments()**函数
+```php 
+    Yii::app()->getmodule('modulename')->post_comments()
+```
+
+2.

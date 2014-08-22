@@ -7,7 +7,7 @@
 			echo "hello World\n";
 		}
 
-		function Say(){
+		static function Say(){
 			self::echoHelloWorld();
 		}
 	}
@@ -16,8 +16,8 @@
 	$obj->Say();
 	//error:  A::echoHelloWorld();
 	class B extends A{
-		
-		static function Say1(){
+
+		 function Say1(){
 			parent::say();
 			//wrong parent::echoHelloWorld();
 		}
